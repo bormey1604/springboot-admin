@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: spring-admin-client
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: password
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  boot:
+    admin:
+      client:
+        url: http://localhost:8090
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
